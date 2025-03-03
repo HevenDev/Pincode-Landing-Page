@@ -84,7 +84,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .servicesPageSection,
 .projectsPageSection, .teamPageSection, .testimonialsPageSection, .contactPageSection, .news_articlePageSection {
-  padding: 8rem 2rem 6rem;
+  padding: 2rem;
 }
 
 .arrow-img {
@@ -106,7 +106,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* === Header CSS === */
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -114,20 +114,6 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: translateY(0);
   text-align: center;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.header.hidden {
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out; /* Ensure transition applies */
-}
-
-.header.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: translateY(0);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 99;
 }
 
@@ -135,7 +121,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 55px;
   height: 50px;
   position: relative;
-  z-index: 99;
+  z-index: 999;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -144,10 +130,20 @@ input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
   background: var(--theme-color);
 }
+.menu-bar.active .bar-1{
+  transform: translateY(15px) rotate(45deg);
+}
+.menu-bar.active .bar-2{
+  opacity: 0;
+}
+.menu-bar.active .bar-3{
+  transform: translateY(-15px) rotate(-45deg);
+}
 .bars{
   width: 80%;
   height: 5px;
   background: var(--gray-color);
+  transition: all 0.4s ease-in-out;
 }
 .navbar {
   padding: 2rem 0;
@@ -155,9 +151,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .logo {
   font-size: 58px;
 }
-
-
-
 .navLinks {
   gap: 25px;
 }
@@ -178,6 +171,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0 2rem;
   justify-content: space-evenly;
   transform: translateY(9rem);
+  gap: 25px;
 }
 
 .home-swiper-container{
@@ -232,12 +226,22 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 .home-head, .home-para {
   opacity: 0;
   width: 100%;
   transform: translateY(50px);
   transition: opacity 2s ease-out, transform 2s ease-out;
+}
+.home-head{
+  font-size: 58px;
+}
+.home-para{
+  font-size: 24px;
 }
 .home-swiper-content.active .home-head,
 .home-swiper-content.active .home-para {
@@ -272,7 +276,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* === About us page CSS === */
 .aboutPageSection {
-  padding: 6rem 2rem 4rem;
+  padding: 12rem 2rem 4rem;
 }
 .aboutUsContent {
   width: 50%;
@@ -290,7 +294,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .aboutList,
 .aboutCallDiv {
   width: 50%;
-  min-width: 300px;
 }
 .aboutList {
   border-right: 1px solid var(--body-text-color);
@@ -712,7 +715,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* ===Footer CSS === */
 .footer{
-  padding: 6rem 0 0;
+  padding: 3rem 0 0;
 }
 .newsletter-container, .footer-content-container{
   padding: 0 2rem;
@@ -722,15 +725,11 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 500;
   color: var(--theme-2-color);
 }
-.newsletter-heading, .newsletter-subscribe-container{
-  width: 49%;
-}
 .newsletter-subscribe-container{
   gap: 25px;
-  justify-content: end;
 }
 .newsletter-subscribe-container input{
-  width: 200px;
+  width: 250px;
   border-radius: 30px;
   border: 1px solid var(--body-text-color);
   outline: none;
@@ -740,7 +739,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .newsletter-subscribe-btn{
   background-color: var(--theme-2-color);
-  width: 200px;
+  width: 250px;
   cursor: pointer;
   font-size: 18px;
   gap: 15px;
@@ -755,17 +754,9 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 25px;
 }
 
-.footer hr{
-  width: 90%;
-  margin: 6rem auto;
-  border: none;
-  height: 1px;
-  background-color: var(--gray-color);
-
-}
 .footer-content-container{
   gap: 30px;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
 }
 .footer-logo h1{
   font-weight: 500;
@@ -777,7 +768,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-content-1 p{
   line-height: 1.7;
   padding: 1.25rem 0;
-  width: 90%;
+}
+.footer-content-1 {
+  width: 30%;
 }
 
 .footer-social-links{
@@ -796,18 +789,6 @@ input[type="number"]::-webkit-inner-spin-button {
   filter: invert(1);
 }
 
-.footer-content-1{
-  width: 30%;
-  min-width: 400px;
-}
-.footer-content-2{
-  /* width: 30%; */
-  min-width: 380px;
-}
-.footer-content-3, .footer-content-4{
-  /* width: 10%; */
-  min-width: 150px;
-}
 .footer-git{
   margin: 2rem 0 1rem;
   gap: 15px;
@@ -831,8 +812,9 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 2rem 0 0 1rem ;
   gap: 25px;
 }
-.footer-useful-link p, .footer-explore-link p{
+.footer-useful-link a, .footer-explore-link p{
   font-size: 18px;
+  display: inline-block;
 }
 
 .copyright{

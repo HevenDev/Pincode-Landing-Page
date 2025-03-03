@@ -10,14 +10,19 @@
     justify-content: center;
     gap: 15px;
   }
+  .name-num-form{
+    gap: 20px;
+  }
+  .name-num-form div{
+    width: 100%;
+  }
 }
 @media (max-width: 1024px) {
   .home-left-swiper{
     display: none;
   }
   .home-swipers{
-    transform: translateY(8rem);
-    background-color: aquamarine;
+    transform: translateY(7rem);
   }
   .menu-bar{
     display: flex;
@@ -26,31 +31,21 @@
     justify-content: space-between;
     padding: 1.75rem 2rem;
   }
-  .navLinks{
+  .navLinks {
     position: fixed;
     flex-direction: column;
-    top: 110px;
+    justify-content: center;
+    top: -100vh;
     right: 0;
     width: 40%;
-    display: none;
-    height: calc(100vh - 110px);
-    transform: translateY(-100%);
-    z-index: 99;
+    height: 100vh;
+    z-index: 999;
     background-color: var(--white-color);
-    transition: transform 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
   }
-  .navLinks.show {
-    transform: translateY(0);
+  .navLinks.show{
+    top: 0;
   }
-  .navLinks.show li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  /* .navLinks li {
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 0.5s, transform 0.5s;
-  } */
  
   .logo {
     font-size: 44px;
@@ -59,12 +54,11 @@
     height: 500px;
     width: 90%;
   }
-  .aboutUsContent, .aboutUsSwiper{
+  .aboutUsContent{
     width: 100%;
   }
   .aboutUsSwiper{
-    width: 70%;
-    height: 600px;
+    display: none;
   }
   .aboutUsContainer{
     gap: 50px;
@@ -74,7 +68,7 @@
     flex-wrap: wrap;
   }
   .getQuotePageSection{
-    padding: 12rem 1rem 2rem;
+    padding: 14rem 1rem 2rem;
   }
   .qoute_img_container_1 img, .qoute_img_container_2 img{
     min-width: 300px;
@@ -93,7 +87,7 @@
   }
   .qoute_content{
     position: absolute;
-    top: 1.5%;
+    top: 4%;
   }
   .qoute_content h1{
     font-size: 34px;
@@ -123,7 +117,13 @@
     min-width: 410px;
   }
   .footer-content-container{
-    justify-content: space-evenly;
+    justify-content: space-around;
+  }
+  /* .footer-content{
+    width: 47%;
+  } */
+  .home-swiper-container .swiper-button-prev, .home-swiper-container .swiper-button-next{
+    top: 90%;
   }
   .contact_form_container{
     justify-content: center;
@@ -136,25 +136,102 @@
     text-align: center;
     padding: 1rem 0 0.75rem;
   }
-  .name-num-form{
-    gap: 20px;
-  }
-  .name-num-form div{
-    width: 100%;
-  }
+  
   .input_container input, .message_container textarea{
     font-size: 17px;
   }
   .form_submit{
     width: 100%;
   }
+  .home-below-swiper{
+    height: 40%;
+  }
 }
 @media (max-width: 768px) {
+  .navbar{
+    padding: 1rem 2rem;
+  }
+  .aboutCallDiv{
+    display: none;
+  }
+  .aboutUsContent{
+    min-width: 0;
+  }
+  .aboutUsContent p{
+    width: 100%;
+  }
+  .aboutCallDiv p{
+    text-align: center;
+  }
+  .aboutList{
+    border: none;
+  }
+  .moreAbout-link {
+    text-align: center;
+    display: block;
+    transform: translateX(0);
+    width: 250px;
+    margin: auto;
+  }
+  .footer-content{
+    width: 100%;
+  }
+  .footer-content-1 p{
+    max-width: 70%;
+  }
   .copyright{
+    justify-content: center;
+    gap: 5px;
     padding: 0.5rem 2.5rem;
+  }
+  .home-head{
+    font-size: 42px;
+  }
+  .home-para{
+    font-size: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .aboutUsSwiper{
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .get_in_touch_map{
+    min-width: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  .get_in_touch_content{
+    min-width: 0;
+    width: 100%;
+  }
+  .git-info-content{
+    width: 100%;
+  }
+  .get_in_touch-info{
+    padding-right: 1rem;
+  }
+  .contact_form_img, .contact_form{
+    min-width: 0;
+    width: 100%;
+  }
+  h1{
+    font-size: 38px;
+  }
+  .qoute_content h1{
+    font-size: 28px;
+  }
+  .navLinks{
+    width: 100%;
   }
 }
 @media (max-width: 425px) {
+  .aboutList,
+.aboutCallDiv {
+  width: 100%;
+}
   .news-card{
     min-width: 310px;
   }
@@ -162,10 +239,29 @@
     width: 25%;
   }
   .contact_form_img, .contact_form{
-    min-width: 350px;
+    min-width: 300px;
   }
   .qoute_img_container_1 img:nth-of-type(2), .qoute_img_container_2 img:nth-of-type(2){
     height: 290px;
     transform: translateY(0);
+  }
+  .s-card{
+    min-width: 0;
+    width: 100%;
+  }
+  .copyright p{
+    text-align: center;
+  }
+  .footer-content-1 p{
+    max-width: 100%;
+  }
+  .home-head{
+    font-size: 28px;
+  }
+  .home-para{
+    font-size: 18px;
+  }
+  .home-swipers{
+    padding: 0 1rem;
   }
 }

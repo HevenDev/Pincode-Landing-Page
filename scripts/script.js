@@ -1,45 +1,13 @@
-document.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
-  const scrollPosition = window.scrollY;
-  const hideThreshold = window.innerHeight * 0.4; // 40vh
-  const showThreshold = window.innerHeight * 0.8; // 80vh
 
-  if (scrollPosition > showThreshold) {
-    header.classList.add("fixed");
-  } else if (scrollPosition > hideThreshold) {
-    header.classList.add("hidden");
-    header.classList.remove("fixed");
-  } else {
-    header.classList.remove("fixed");
-
-    // Delay removing hidden to allow transition back
-    setTimeout(() => {
-      header.classList.remove("hidden");
-    }, 100);
-  }
-
-  // === Menu bar script ===
+document.addEventListener("DOMContentLoaded", () => {
+  updateLeftSwiper();
   const menuBar = document.querySelector(".menu-bar");
   const navLinks = document.querySelector(".navLinks");
 
   menuBar.addEventListener("click", () => {
-    if (!navLinks.classList.contains("show")) {
-      // Show navLinks with delay for transition
-      navLinks.style.display = "flex";
-      setTimeout(() => {
-        navLinks.classList.add("show");
-      }, 10);
-    } else {
-      // Animate out before hiding
-      navLinks.classList.remove("show");
-      setTimeout(() => {
-        navLinks.style.display = "none";
-      }, 500); // Matches transition duration
-    }
+    navLinks.classList.toggle("show")
+    menuBar.classList.toggle("active")
   });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  updateLeftSwiper();
 });
 const swiperContent = [
   { heading: "Make Dream For Better Future", para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quae sequi iste optio? Quis obcaecati reprehenderit error. Sint reiciendis impedit alias ipsa, exercitationem officiis totam tenetur corporis ducimus aperiam aut." },
