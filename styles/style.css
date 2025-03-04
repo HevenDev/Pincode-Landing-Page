@@ -19,6 +19,7 @@
 
   /* === Color === */
 
+  /* #845020 #AE782B #FBD268 #FDF59D */
   --white-color: #fff;
   --title-color: #0d0d0c;
   --body-text-color: #6e7070;
@@ -30,6 +31,7 @@ body {
   /* overflow-x: hidden; */
   font-family: var(--body-font);
   color: var(--body-text-color);
+  background-color: #FDF59D;
 }
 h1,
 h2,
@@ -45,7 +47,7 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #0d0d0c;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +112,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--white-color);
+  background-color: #845020;
   transform: translateY(0);
   text-align: center;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -118,8 +120,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .menu-bar{
-  width: 55px;
-  height: 50px;
+  width: 40px;
+  height: 35px;
+  padding: 6px;
   position: relative;
   z-index: 999;
   flex-direction: column;
@@ -128,38 +131,41 @@ input[type="number"]::-webkit-inner-spin-button {
   gap: 10px;
   display: none;
   cursor: pointer;
-  background: var(--theme-color);
+  border-radius: 5px;
+  background: #AE782B;
 }
 .menu-bar.active .bar-1{
-  transform: translateY(15px) rotate(45deg);
+  transform: translateY(11px) rotate(45deg);
 }
 .menu-bar.active .bar-2{
   opacity: 0;
 }
 .menu-bar.active .bar-3{
-  transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-11px) rotate(-45deg);
 }
 .bars{
-  width: 80%;
+  width: 100%;
   height: 5px;
   background: var(--gray-color);
   transition: all 0.4s ease-in-out;
 }
 .navbar {
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 .logo {
   font-size: 58px;
+  color: #fff;
 }
 .navLinks {
   gap: 25px;
+ 
 }
 .rq-visit h2 {
   font-weight: 400;
   font-size: 20px;
 }
 .rq-visit a {
-  background-color: var(--theme-color);
+  background-color: #AE782B;
   color: var(--white-color);
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -181,17 +187,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .home-swiper-container .swiper-button-prev, .home-swiper-container .swiper-button-next{
   top: 82%;
-  background: var(--gray-color);
+  background: #FDF59D;
   padding: 1.5rem;
   border-radius: 50%;
-  border: 1px solid var(--theme-2-color);
+  border: 1px solid #845020;
 }
 .home-swiper-container .swiper-button-prev{
   left: -3%;
 }
 .home-swiper-container .swiper-button-prev::after, .home-swiper-container .swiper-button-next::after{
   font-size: 25px;
-  color: var(--theme-2-color);
+  color: #845020;
 }
 .home-swiper-container .swiper-button-next{
   right: -3%;
@@ -395,7 +401,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* === Projects page CSS === */
 .projectsPageSection {
-  background-color: var(--theme-2-color);
+  background-color: #AE782B;
 }
 
 .browse-project-link a, .view-team-link a, .browse-blog-link a, .news-card > a {
@@ -412,7 +418,6 @@ input[type="number"]::-webkit-inner-spin-button {
 /* === Get qoute page CSS Starts === */
 .getQuotePageSection{
   padding: 12rem 1rem;
-  background-color: var(--gray-color);
   border-radius: 100px 100px 0 0;
   position: relative;
 }
@@ -425,7 +430,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 188px;
   background: transparent;
   border-top-left-radius: 100px;
-  box-shadow: 0 -95px 0 var(--theme-2-color);
+  box-shadow: 0 -95px 0 #AE782B;
   
 }
 .getQuotePageSection::after, .testimonialsPageSection::after{
@@ -437,7 +442,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 188px;
   background: transparent;
   border-top-right-radius: 100px;
-  box-shadow: 0 -95px 0 var(--theme-2-color);
+  box-shadow: 0 -95px 0 #AE782B;
 }
 
 .qoute_img_container_1, .qoute_img_container_2{
@@ -570,7 +575,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 /* === Contact Page CSS === */
 .contactPageSection{
-  background-color: var(--theme-2-color);
+  background-color: #AE782B;
 }
 .contact_form_container{
   padding-top: 6rem;
@@ -607,12 +612,12 @@ input[type="number"]::-webkit-inner-spin-button {
   background: transparent;
   inset: none;
   border-radius: 30px;
-  border: 1px solid var(--body-text-color);
+  border: 1px solid #fff;
   outline: none;
-  color: var(--white-color);
+  color: #fff;
 }
 .input_container input::placeholder, .message_container textarea::placeholder{
-  color: var(--gray-color);
+  color: #fff;
 }
 .input_container, .message_container{
   position: relative;
@@ -636,18 +641,12 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
   border-radius: 30px;
-  border: 1px solid var(--body-text-color);
-  background-color: transparent;
-  color: var(--white-color);
-}
-.form_submit img{
-  filter: invert(1);
+  border: 1px solid #fff;
+  background-color: #FDF59D;
+  color: #000;
 }
 
 /* === Get in touch Page CSS === */
-.get_in_touchPageSection{
-  background: var(--gray-color);
-}
 .get_in_touch_content{
   padding: 6rem 0 4rem 2rem;
   width: 55%;
@@ -716,6 +715,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* ===Footer CSS === */
 .footer{
   padding: 3rem 0 0;
+  background-color: #AE782B;
 }
 .newsletter-container, .footer-content-container{
   padding: 0 2rem;
@@ -760,10 +760,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .footer-logo h1{
   font-weight: 500;
-  color: var(--body-text-color);
+  color: #fff;
 }
 .footer-content h2{
-  color: var(--theme-2-color);
+  color: #fff;
 }
 .footer-content-1 p{
   line-height: 1.7;
@@ -771,22 +771,23 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .footer-content-1 {
   width: 30%;
+  color: #fff;
 }
 
 .footer-social-links{
   gap: 10px;
+  color: #fff;
 }
 .footer-social{
   display: flex;
   align-items: center;
-  background-color: var(--theme-2-color);
+  background-color: #FBD268;
   padding: 0.5rem;
   border-radius: 50%;
 }
 .footer-social img{
   width: 100%;
   width: 20px;
-  filter: invert(1);
 }
 
 .footer-git{
@@ -798,7 +799,8 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   border-radius: 50%;
   padding: 0.5rem;
-  border: 1px solid var(--theme-2-color);
+  border: 1px solid #fff;
+  background: #FBD268;
 }
 .footer-git-icon img{
   width: 25px;
@@ -806,6 +808,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-git-para p{
   font-size: 18px;
   line-height: 1.4;
+  color: #fff;
 }
 
 .footer-useful-link, .footer-explore-link{
@@ -815,11 +818,12 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-useful-link a, .footer-explore-link p{
   font-size: 18px;
   display: inline-block;
+  color: #fff;
 }
 
 .copyright{
   padding: 1.5rem 3rem;
-  background-color: var(--theme-2-color);
+  background-color: #845020;
 }
 .copyright p, .footer-policy-links a{
   color: var(--gray-color);

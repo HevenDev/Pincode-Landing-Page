@@ -1,6 +1,10 @@
 @media (max-width: 1320px) {
-  .rq-visit{
-    display: none;
+  .rq-visit a{
+    position: fixed;
+    top: 50vh;
+    right: -8.5%;
+    transform: translateY(-50%) rotate(270deg);
+    border: 1px solid #fff;
   }
   .newsletter-heading{
     width: 100%;
@@ -40,8 +44,11 @@
     width: 40%;
     height: 100vh;
     z-index: 999;
-    background-color: var(--white-color);
+    background-color: #FDF59D;
     transition: top 0.5s ease-in-out;
+  }
+  .navLinks a{
+    color: #000;
   }
   .navLinks.show{
     top: 0;
