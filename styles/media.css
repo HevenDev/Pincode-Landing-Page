@@ -1,9 +1,13 @@
 @media (max-width: 1320px) {
-  .rq-visit a{
+  .rq-visit{
     position: fixed;
     top: 50vh;
-    right: -8.5%;
+    right: -5.25rem;
     transform: translateY(-50%) rotate(270deg);
+    
+    z-index: 999;
+  }
+  .rq-visit a{
     border: 1px solid #fff;
   }
   .newsletter-heading{
@@ -32,7 +36,7 @@
     display: flex;
   }
   .navbar{
-    justify-content: space-between;
+    justify-content: space-between !important;
     padding: 1.75rem 2rem;
   }
   .navLinks {
