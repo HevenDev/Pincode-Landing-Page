@@ -72,10 +72,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .moreAbout-link a,
 .browse-service-link a,
 .browse-project-link a, .get_in_touch_link a, .view-team-link a, .browse-blog-link a, .news-card > a {
-  color: var(--text-color);
+  color: #fff;
   font-weight: 400;
   border-radius: 30px;
-  background-color: var(--gold-color);
+  background-color: #301a1a;
   letter-spacing: 1px;
   padding: 1rem 2rem;
   white-space: nowrap;
@@ -83,6 +83,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .moreAbout-link {
   transform: translateX(1.5rem) translateY(2rem);
   display: inline-block;
+  background-color: #301a1a;
+  width: 275px;
+  border-radius: 25px;
 }
 .servicesPageSection,
 .projectsPageSection, .teamPageSection, .testimonialsPageSection, .contactPageSection, .news_articlePageSection {
@@ -112,7 +115,6 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   top: 0;
   left: 0;
-  
   transform: translateY(0);
   text-align: center;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -127,31 +129,31 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   display: none;
   cursor: pointer;
   border-radius: 5px;
-  background: #AE782B;
 }
 .menu-bar.active .bar-1{
-  transform: translateY(11px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 .menu-bar.active .bar-2{
   opacity: 0;
 }
 .menu-bar.active .bar-3{
-  transform: translateY(-11px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 .bars{
   width: 100%;
-  height: 5px;
-  background: var(--gray-color);
+  height: 3px;
+  border-radius: 4px;
+  background: #fff;
   transition: all 0.4s ease-in-out;
 }
 .navbar {
   padding: 0.5rem 0;
   justify-content: space-around;
-  background-color: #845020;
+  background-color: #301a1a;
 }
 .logo img{
   width: 120px;
@@ -167,7 +169,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 20px;
 }
 .rq-visit a {
-  background-color: #AE782B;
+  background-color: #301a1a;
   color: var(--white-color);
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -189,7 +191,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .home-swiper-container .swiper-button-prev, .home-swiper-container .swiper-button-next{
   top: 82%;
-  background: #FDF59D;
+  background: #301a1a;
   padding: 1.5rem;
   border-radius: 50%;
   border: 1px solid #845020;
@@ -199,7 +201,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .home-swiper-container .swiper-button-prev::after, .home-swiper-container .swiper-button-next::after{
   font-size: 25px;
-  color: #845020;
+  color: #fff;
 }
 .home-swiper-container .swiper-button-next{
   right: -3%;
@@ -403,7 +405,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* === Projects page CSS === */
 .projectsPageSection {
-  background-color: #AE782B;
+  background-color: #301a1a;
 }
 
 .browse-project-link a, .view-team-link a, .browse-blog-link a, .news-card > a {
@@ -433,7 +435,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 188px;
   background: transparent;
   border-top-left-radius: 100px;
-  box-shadow: 0 -95px 0 #AE782B;
+  box-shadow: 0 -95px 0 #301a1a;
   
 }
 .getQuotePageSection::after, .testimonialsPageSection::after{
@@ -445,7 +447,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 188px;
   background: transparent;
   border-top-right-radius: 100px;
-  box-shadow: 0 -95px 0 #AE782B;
+  box-shadow: 0 -95px 0 #301a1a;
 }
 
 .qoute_img_container_1, .qoute_img_container_2{
@@ -578,7 +580,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 /* === Contact Page CSS === */
 .contactPageSection{
-  background-color: #AE782B;
+  background-color: #301a1a;
 }
 .contact_form_container{
   padding-top: 6rem;
@@ -644,9 +646,9 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
   border-radius: 30px;
-  border: 1px solid #fff;
-  background-color: #FDF59D;
-  color: #000;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
 }
 
 /* === Get in touch Page CSS === */
@@ -718,8 +720,8 @@ input[type="number"]::-webkit-inner-spin-button {
 /* ===Footer CSS === */
 .footer{
   padding: 3rem 0 0;
-  background: linear-gradient(135deg, #AE782B 0%, #FBD268 50%, #FDF59D 100%);
-  color: var(--text-color);
+  color: #fff;
+  background: linear-gradient(135deg, #462f2f 0%, #301a1a 50%, #301a2c 100%);  color: var(--text-color);
 }
 
 .footer-content-container{
@@ -732,6 +734,19 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-content-1 p{
   line-height: 1.7;
   padding: 1.25rem 0;
+  color: #fff;
+}
+
+.footer-content-2{
+  color: #fff;
+}
+
+.footer-content-3{
+  color: #fff;
+}
+
+.footer-content-3 a{
+  color: #fff;
 }
 .footer-content-1 {
   width: 30%;
@@ -743,7 +758,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-social{
   display: flex;
   align-items: center;
-  background-color: var(--gold-color);
+  background-color: #dec0c0;
   padding: 0.5rem;
   border-radius: 50%;
 }
@@ -762,7 +777,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 50%;
   padding: 0.5rem;
   border: 1px solid #fff;
-  background: #FBD268;
+  background: #dec0c0;
 }
 .footer-git-icon img{
   width: 25px;
@@ -786,4 +801,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .footer-policy-links{
   gap: 25px;
+}
+
+
+.copyright {
+  color: #fff;
+}
+
+.copyright a{
+  color: #fff;
 }

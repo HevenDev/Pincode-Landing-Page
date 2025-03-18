@@ -1,588 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/shortCSS.css" />
-    <link rel="stylesheet" href="/styles/media.css" />
-    <link rel="stylesheet" href="/styles/swiper.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Pincode - Home</title>
-  </head>
-  <body>
-    <section class="homePageSection">
-      <header class="header">
-        <nav class="navbar flex items-center">
-          <div class="logo"><img src="/images/LogoWhite.png" alt="Logo_Pincode"></div>
-          <ul class="navLinks flex justify-around">
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Amenities</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Contact Us</a></li>
-          </ul>
-          <div class="menu-bar">
-            <div class="bars bar-1"></div>
-            <div class="bars bar-2"></div>
-            <div class="bars bar-3"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/shortCSS.css" />
+  <link rel="stylesheet" href="/styles/media.css" />
+  <link rel="stylesheet" href="/styles/swiper.css" />
+  <link rel="stylesheet" href="/styles/properties-popup.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <title>Pincode - Home</title>
+</head>
+
+<body>
+
+  <!-- Properties popup -->
+
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Project Inquiry</h2>
+      <form id="projectForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Your Phone" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <section class="homePageSection">
+    <header class="header">
+      <nav class="navbar flex items-center">
+        <div class="logo"><img src="/images/LogoWhite.png" alt="Logo_Pincode"></div>
+        <ul class="navLinks flex justify-around">
+          <li><a href="#">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="#" id="openPopup">Projects</a></li>
+          <li><a href="/amenities.html">Amenities</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-bar">
+          <div class="bars bar-1"></div>
+          <div class="bars bar-2"></div>
+          <div class="bars bar-3"></div>
+        </div>
+        <div class="rq-visit" >
+          <h2>
+            <a href="#" id="openPopup">Request A Visit
+              <img class="arrow-img" src="/images/thin-arrow.png" alt="right-arrow" /></a>
+          </h2>
+        </div>
+      </nav>
+    </header>
+    <main class="home-main">
+      <div class="home-swipers flex">
+        <div class="home-left-swiper">
+          <img id="activeImage" src="" alt="home-left-slide" />
+        </div>
+        <div class="home-swiper-container">
+          <div class="home-swiper-content">
+            <h2 class="home-head"></h2>
+            <p class="home-para"></p>
           </div>
-          <div class="rq-visit">
-            <h2>
-              <a href=""
-                >Request A Visit
-                <img
-                  class="arrow-img"
-                  src="/images/thin-arrow.png"
-                  alt="right-arrow"
-              /></a>
-            </h2>
-          </div>
-        </nav>
-      </header>
-      <main class="home-main">
-        <div class="home-swipers flex">
-          <div class="home-left-swiper">
-            <img id="activeImage" src="" alt="home-left-slide" />
-          </div>
-          <div class="home-swiper-container">
-            <div class="home-swiper-content">
-              <h2 class="home-head"></h2>
-              <p class="home-para"></p>
-            </div>
-            <div class="home-below-swiper">
-              <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper home-swiper-wraper">
-                  <!-- Slides -->
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content1"
-                      src="https://plus.unsplash.com/premium_photo-1688120026544-bf41a74f05df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="home-slide-img"
-                    />
-                  </div>
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content2"
-                      src="https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXVyb3BlfGVufDB8fDB8fHww"
-                      alt="home-slide-img-2"
-                    />
-                  </div>
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content3"
-                      src="https://images.unsplash.com/photo-1473951574080-01fe45ec8643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="home-slide-img"
-                    />
-                  </div>
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content4"
-                      src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="home-slide-img"
-                    />
-                  </div>
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content5"
-                      src="https://images.unsplash.com/photo-1542379950-b3fc716c16f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="home-slide-img"
-                    />
-                  </div>
-                  <div class="swiper-slide home-slide">
-                    <img
-                      id="content6"
-                      src="https://images.unsplash.com/photo-1501952476817-d7ae22e8ee4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="home-slide-img"
-                    />
-                  </div>
+          <div class="home-below-swiper">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper home-swiper-wraper">
+                <!-- Slides -->
+                <div class="swiper-slide home-slide">
+                  <img id="content1"
+                    src="https://plus.unsplash.com/premium_photo-1688120026544-bf41a74f05df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="home-slide-img" />
+                </div>
+                <div class="swiper-slide home-slide">
+                  <img id="content2"
+                    src="https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXVyb3BlfGVufDB8fDB8fHww"
+                    alt="home-slide-img-2" />
+                </div>
+                <div class="swiper-slide home-slide">
+                  <img id="content3"
+                    src="https://images.unsplash.com/photo-1473951574080-01fe45ec8643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="home-slide-img" />
+                </div>
+                <div class="swiper-slide home-slide">
+                  <img id="content4"
+                    src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="home-slide-img" />
+                </div>
+                <div class="swiper-slide home-slide">
+                  <img id="content5"
+                    src="https://images.unsplash.com/photo-1542379950-b3fc716c16f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="home-slide-img" />
+                </div>
+                <div class="swiper-slide home-slide">
+                  <img id="content6"
+                    src="https://images.unsplash.com/photo-1501952476817-d7ae22e8ee4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="home-slide-img" />
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
-        </div>
-      </main>
-    </section>
-    <section class="aboutPageSection">
-      <div class="aboutUsContainer flex items-center flex-wrap justify-center">
-        <div class="aboutUsContent">
-          <h1>About Us</h1>
-          <p>
-            PINCODE is a forward-thinking real estate developer in India, committed to crafting exceptional living experiences. Our mission is to harmonize innovation with tradition, ensuring that every community we build is inspired by local heritage, designed for comfort, and shaped to enrich the lives of its residents. From thoughtful architecture to transparent processes, we strive to set a new benchmark in responsible and visionary development.
-          </p>
-          <div class="aboutListDiv flex flex-wrap-reverse">
-            <ul class="aboutList flex flex-col itmes-center">
-              <li class="flex items-center">
-                <img src="/images/quality.png" alt="qualityChecks" /> Quality
-                real estate services
-              </li>
-              <li class="flex items-center">
-                <img src="/images/quality.png" alt="qualityChecks" />100%
-                Satisfaction guarantee
-              </li>
-              <li class="flex items-center">
-                <img src="/images/quality.png" alt="qualityChecks" />Highly
-                professional team
-              </li>
-              <li class="flex items-center">
-                <img src="/images/quality.png" alt="qualityChecks" />Dealing
-                always on time
-              </li>
-            </ul>
-            <div class="aboutCallDiv flex flex-col justify-center">
-              <img src="/images/call-us-icon.png" alt="call-us-icon" />
-              <p>Call us 24/7</p>
-              <h3>+01 239284721</h3>
-            </div>
-          </div>
-          <h3 class="moreAbout-link">
-            <a href=""
-              >More about Pincode
-              <img
-                class="arrow-img"
-                src="/images/thin-arrow.png"
-                alt="right-arrow"
-            /></a>
-          </h3>
-        </div>
-        <div class="aboutUsSwiper">
-          <div class="swiper about-swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper about-swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1739382445469-c35d08ca4277?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
-                  alt="about-slide-one"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1738779001572-bfef89e92f08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-two"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1738595634712-a008b400fb1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-three"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1739381193966-b6cc991c6251?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-four"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1739323924885-b68f59e7faca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-five"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1738857914575-3d3b2fb7064e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-six"
-                />
-              </div>
-              <div class="swiper-slide about-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1739104627818-d9159a7daa8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4NHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="about-slide-seven"
-                />
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
-    </section>
-    <section class="projectsPageSection">
-      <div class="project-content project-gsap-top flex items-center">
-        <div class="project-headings">
-          <h1>Browse Our Latest Projects</h1>
-          <p>
-            We are a real estate firm with over 20 years of expertise, and our
-            main goal is to provide amazing locations to our partners and
-            clients.
-          </p>
+    </main>
+  </section>
+  <section class="aboutPageSection">
+    <div class="aboutUsContainer flex items-center flex-wrap justify-center">
+      <div class="aboutUsContent">
+        <h1>About Us</h1>
+        <p>
+          PINCODE is a forward-thinking real estate developer in India, committed to crafting exceptional living
+          experiences. Our mission is to harmonize innovation with tradition, ensuring that every community we build is
+          inspired by local heritage, designed for comfort, and shaped to enrich the lives of its residents. From
+          thoughtful architecture to transparent processes, we strive to set a new benchmark in responsible and
+          visionary development.
+        </p>
+        <div class="aboutListDiv flex flex-wrap-reverse">
+          <ul class="aboutList flex flex-col itmes-center">
+            <li class="flex items-center">
+              <img src="/images/quality.png" alt="qualityChecks" /> Quality
+              real estate services
+            </li>
+            <li class="flex items-center">
+              <img src="/images/quality.png" alt="qualityChecks" />100%
+              Satisfaction guarantee
+            </li>
+            <li class="flex items-center">
+              <img src="/images/quality.png" alt="qualityChecks" />Highly
+              professional team
+            </li>
+            <li class="flex items-center">
+              <img src="/images/quality.png" alt="qualityChecks" />Dealing
+              always on time
+            </li>
+          </ul>
+          <div class="aboutCallDiv flex flex-col justify-center">
+            <img src="/images/call-us-icon.png" alt="call-us-icon" />
+            <p>Call us 24/7</p>
+            <h3>+01 239284721</h3>
+          </div>
         </div>
-        <div class="browse-projects project-gsap-top">
-          <h3 class="browse-project-link">
-            <a href=""
-              >Browse All Products
-              <img
-                class="arrow-img"
-                src="/images/thin-arrow.png"
-                alt="right-arrow"
-            /></a>
-          </h3>
-        </div>
+        <h3 class="moreAbout-link">
+          <a href="">More about Pincode
+            <img class="arrow-img" src="/images/thin-arrow.png" alt="right-arrow" /></a>
+        </h3>
       </div>
-      <div class="projectSwiper">
-        <div class="swiper project-swiper-container">
+      <div class="aboutUsSwiper">
+        <div class="swiper about-swiper-container">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper project-swiper-wrapper">
+          <div class="swiper-wrapper about-swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1739323006029-2d8452a47df6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
-                  alt="project-slide-1"
-                />
-              </div>
-              <h2>Villa Amsterdam</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://images.unsplash.com/photo-1739382445469-c35d08ca4277?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+                alt="about-slide-one" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="project-slide-2"
-                />
-              </div>
-              <h2>Villa Interlaken</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1738779001572-bfef89e92f08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-two" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1738779001459-3c2efd2f6e88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="project-slide-3"
-                />
-              </div>
-              <h2>Villa Veince</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://images.unsplash.com/photo-1738595634712-a008b400fb1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-three" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXVyb3BlfGVufDB8fDB8fHww"
-                  alt="project-slide-4"
-                />
-              </div>
-              <h2>Villa France</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://images.unsplash.com/photo-1739381193966-b6cc991c6251?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-four" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1690372791935-3efc879e4ca3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXVyb3BlfGVufDB8fDB8fHww"
-                  alt="project-slide-5"
-                />
-              </div>
-              <h2>Villa London</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://images.unsplash.com/photo-1739323924885-b68f59e7faca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-five" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXVyb3BlfGVufDB8fDB8fHww"
-                  alt="project-slide-6"
-                />
-              </div>
-              <h2>Villa Zurich</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1738857914575-3d3b2fb7064e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MHx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-six" />
             </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="project-slide-7"
-                />
-              </div>
-              <h2>Villa Berlin</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
-            </div>
-            <div class="swiper-slide project-slide">
-              <div class="project-slide-img">
-                <img
-                  src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="project-slide-8"
-                />
-              </div>
-              <h2>Villa Moscow</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-                cupiditate assumenda, odit
-              </p>
+            <div class="swiper-slide about-slide">
+              <img
+                src="https://images.unsplash.com/photo-1739104627818-d9159a7daa8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4NHx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-slide-seven" />
             </div>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
-    </section>
-    <section class="getQuotePageSection">
-      <div class="getQuote_container flex flex-col justify-center items-center">
-        <div class="qoute_img_container_1 flex justify-center">
-          <img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-1.png"
-            alt="quote-img-1"
-          /><img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-2.png"
-            alt="quote-img-2"
-          /><img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-3.png"
-            alt="quote-img-3"
-          />
-        </div>
-        <div class="qoute_content flex flex-col justify-center items-center">
-          <h1>To Get A</h1>
-          <h1>Free Project Quote</h1>
-          <div class="get_in_touch_link">
-            <h3>
-              <a href=""
-                >Get In Touch
-                <img
-                  class="arrow-img"
-                  src="/images/thin-arrow.png"
-                  alt="right_arrow"
-              /></a>
-            </h3>
-          </div>
-        </div>
-        <div class="qoute_img_container_2 flex justify-center">
-          <img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-4.png"
-            alt="quote-img-4"
-          /><img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-5.png"
-            alt="quote-img-5"
-          /><img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-6.png"
-            alt="quote-img-6"
-          />
-        </div>
+    </div>
+  </section>
+  <section class="projectsPageSection">
+    <div class="project-content project-gsap-top flex items-center">
+      <div class="project-headings">
+        <h1>Browse Our Latest Projects</h1>
+        <p>
+          We are a real estate firm with over 20 years of expertise, and our
+          main goal is to provide amazing locations to our partners and
+          clients.
+        </p>
       </div>
-    </section>
-    <section class="contactPageSection">
-      <div
-        class="contact_form_container flex-wrap flex justify-around items-center"
-      >
-        <div class="contact_form_img">
-          <img
-            src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/booking_1_1.png"
-            alt="contact-form-img"
-          />
-        </div>
-        <form action="" class="contact_form flex flex-col">
-          <h1>Book Business Solutions</h1>
-          <div class="flex flex-wrap name-num-form justify-between">
-            <div class="input_container">
-              <input type="text" required placeholder="Your Name" />
-              <img src="/images/user.png" alt="form_name_icon" />
+      <div class="browse-projects project-gsap-top">
+        <h3 class="browse-project-link">
+          <a href="">Browse All Products
+            <img class="arrow-img" src="/images/thin-arrow.png" alt="right-arrow" /></a>
+        </h3>
+      </div>
+    </div>
+    <div class="projectSwiper">
+      <div class="swiper project-swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper project-swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1739323006029-2d8452a47df6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                alt="project-slide-1" />
             </div>
-            <div class="input_container">
-              <input type="number" required placeholder="Number" />
-              <img src="/images/phone-call.png" alt="form_num_icon" />
-            </div>
-          </div>
-          <div class="input_container">
-            <input type="email" required placeholder="Email" />
-            <img src="/images/mail.png" alt="form_email_icon" />
-          </div>
-          <div class="message_container">
-            <textarea
-              placeholder="What's in your mind..?"
-              name=""
-              id=""
-              rows="6"
-              style="resize: none"
-            ></textarea>
-            <img src="/images/conversation.png" alt="form_message_icon" />
-          </div>
-          <button
-            type="submit"
-            class="form_submit flex justify-center items-center"
-          >
-            Submit Message <img src="/images/send.png" alt="form_submit_icon" />
-          </button>
-        </form>
-      </div>
-    </section>
-    <section class="get_in_touchPageSection">
-      <div
-        class="get_in_touch_container flex flex-wrap items-center justify-center"
-      >
-        <div class="get_in_touch_content">
-          <div class="get_in_touch-heading">
-            <h1>Get In Touch</h1>
+            <h2>Villa Amsterdam</h2>
             <p>
-              Realar help you easily create a real estate trading website. With
-              the function Register, Login, Post real estate news.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
             </p>
           </div>
-          <div class="get_in_touch-info">
-            <div class="git-info-content flex">
-              <div class="git-info-content-img">
-                <img src="/images/pin.png" alt="git-info-location-icon" />
-              </div>
-              <div class="git-info-content-headings">
-                <h2>Location:</h2>
-                <p>1403 Washington Ave, New</p>
-                <p>ns, LA 70130 United States</p>
-              </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="project-slide-2" />
             </div>
-            <div class="git-info-content flex">
-              <div class="git-info-content-img">
-                <img
-                  src="/images/phone-call.png"
-                  alt="git-info-location-icon"
-                />
-              </div>
-              <div class="git-info-content-headings">
-                <h2>Phone:</h2>
-                <p>+00 123 456 7890</p>
-                <p>+00 123 456 7890</p>
-              </div>
+            <h2>Villa Interlaken</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1738779001459-3c2efd2f6e88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NHx8fGVufDB8fHx8fA%3D%3D"
+                alt="project-slide-3" />
             </div>
-            <div class="git-info-content flex">
-              <div class="git-info-content-img">
-                <img src="/images/mail.png" alt="git-info-location-icon" />
-              </div>
-              <div class="git-info-content-headings">
-                <h2>Email:</h2>
-                <p>infomailrealar@gmail.com</p>
-                <p>supportmail01@gmail.com</p>
-              </div>
+            <h2>Villa Veince</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXVyb3BlfGVufDB8fDB8fHww"
+                alt="project-slide-4" />
             </div>
+            <h2>Villa France</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1690372791935-3efc879e4ca3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXVyb3BlfGVufDB8fDB8fHww"
+                alt="project-slide-5" />
+            </div>
+            <h2>Villa London</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXVyb3BlfGVufDB8fDB8fHww"
+                alt="project-slide-6" />
+            </div>
+            <h2>Villa Zurich</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="project-slide-7" />
+            </div>
+            <h2>Villa Berlin</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
+          </div>
+          <div class="swiper-slide project-slide">
+            <div class="project-slide-img">
+              <img
+                src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="project-slide-8" />
+            </div>
+            <h2>Villa Moscow</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
+              cupiditate assumenda, odit
+            </p>
           </div>
         </div>
-        <div class="get_in_touch_map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1739433498393!5m2!1sen!2sin"
-            width="100%"
-            height="700"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+      </div>
+    </div>
+  </section>
+  <section class="getQuotePageSection">
+    <div class="getQuote_container flex flex-col justify-center items-center">
+      <div class="qoute_img_container_1 flex justify-center">
+        <img src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-1.png" alt="quote-img-1" /><img
+          src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-2.png" alt="quote-img-2" /><img
+          src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-3.png" alt="quote-img-3" />
+      </div>
+      <div class="qoute_content flex flex-col justify-center items-center">
+        <h1>To Get A</h1>
+        <h1>Free Project Quote</h1>
+        <div class="get_in_touch_link">
+          <h3>
+            <a href="">Get In Touch
+              <img class="arrow-img" src="/images/thin-arrow.png" alt="right_arrow" /></a>
+          </h3>
         </div>
       </div>
-    </section>
-    <footer class="footer">
-      <div class="footer-content-container justify-around flex flex-wrap">
-        <div class="footer-content-1 fc footer-content">
-          <div class="footer-logo"><img src="/images/LogoBrown.png" alt="Footer_Logo_Pincode"></div>
+      <div class="qoute_img_container_2 flex justify-center">
+        <img src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-4.png" alt="quote-img-4" /><img
+          src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-5.png" alt="quote-img-5" /><img
+          src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/2-6.png" alt="quote-img-6" />
+      </div>
+    </div>
+  </section>
+  <section class="contactPageSection">
+    <div class="contact_form_container flex-wrap flex justify-around items-center">
+      <div class="contact_form_img">
+        <img src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/booking_1_1.png"
+          alt="contact-form-img" />
+      </div>
+      <form action="" class="contact_form flex flex-col">
+        <h1>Book Business Solutions</h1>
+        <div class="flex flex-wrap name-num-form justify-between">
+          <div class="input_container">
+            <input type="text" required placeholder="Your Name" />
+            <img src="/images/user.png" alt="form_name_icon" />
+          </div>
+          <div class="input_container">
+            <input type="number" required placeholder="Number" />
+            <img src="/images/phone-call.png" alt="form_num_icon" />
+          </div>
+        </div>
+        <div class="input_container">
+          <input type="email" required placeholder="Email" />
+          <img src="/images/mail.png" alt="form_email_icon" />
+        </div>
+        <div class="message_container">
+          <textarea placeholder="What's in your mind..?" name="" id="" rows="6" style="resize: none"></textarea>
+          <img src="/images/conversation.png" alt="form_message_icon" />
+        </div>
+        <button type="submit" class="form_submit flex justify-center items-center">
+          Submit Message <img src="/images/send.png" alt="form_submit_icon" />
+        </button>
+      </form>
+    </div>
+  </section>
+  <section class="get_in_touchPageSection">
+    <div class="get_in_touch_container flex flex-wrap items-center justify-center">
+      <div class="get_in_touch_content">
+        <div class="get_in_touch-heading">
+          <h1>Get In Touch</h1>
           <p>
-            Whether you’re seeking a personal sanctuary, an investment anchored in faith, or a peaceful setting to spend your golden years, our plotted housing project offers an opportunity to be part of Ayodhya’s evolving tapestry.
+            Realar help you easily create a real estate trading website. With
+            the function Register, Login, Post real estate news.
           </p>
-          <div class="footer-social-links flex">
-            <div class="footer-social">
-              <img src="/images/facebook-app-symbol.png" alt="facebook-icon" />
-            </div>
-            <div class="footer-social">
-              <img src="/images/twitter.png" alt="twitter-icon" />
-            </div>
-            <div class="footer-social">
-              <img src="/images/youtube.png" alt="youtube-icon" />
-            </div>
-            <div class="footer-social">
-              <img src="/images/instagram.png" alt="instagram-icon" />
-            </div>
-          </div>
         </div>
-        <div class="footer-content-2 fc footer-content">
-          <h2>Get In Touch</h2>
-          <div class="footer-git flex items-center">
-            <div class="footer-git-icon">
-              <img src="/images/pin.png" alt="footer-location-icon" />
+        <div class="get_in_touch-info">
+          <div class="git-info-content flex">
+            <div class="git-info-content-img">
+              <img src="/images/pin.png" alt="git-info-location-icon" />
             </div>
-            <div class="footer-git-para">
-              <p>PINCODE Real Estate, <br> Ayodhya,  Uttar Pradesh</p>
-            </div>
-          </div>
-          <div class="footer-git flex items-center">
-            <div class="footer-git-icon">
-              <img src="/images/conversation.png" alt="footer-location-icon" />
-            </div>
-            <div class="footer-git-para">
-              <p>+91 xxxxxxxx</p>
+            <div class="git-info-content-headings">
+              <h2>Location:</h2>
+              <p>1403 Washington Ave, New</p>
+              <p>ns, LA 70130 United States</p>
             </div>
           </div>
-          <div class="footer-git flex items-center">
-            <div class="footer-git-icon">
-              <img src="/images/mail.png" alt="footer-location-icon" />
+          <div class="git-info-content flex">
+            <div class="git-info-content-img">
+              <img src="/images/phone-call.png" alt="git-info-location-icon" />
             </div>
-            <div class="footer-git-para">
-              <p>info@pincodeayodhya.in</p>
+            <div class="git-info-content-headings">
+              <h2>Phone:</h2>
+              <p>+00 123 456 7890</p>
+              <p>+00 123 456 7890</p>
             </div>
           </div>
-        </div>
-        <div class="footer-content-3 fc footer-content">
-          <h2>Useful Link</h2>
-          <div class="footer-useful-link flex flex-col">
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Amenities</a>
-            <a href="">Gallery</a>
-            <a href="">Contact Us</a>
+          <div class="git-info-content flex">
+            <div class="git-info-content-img">
+              <img src="/images/mail.png" alt="git-info-location-icon" />
+            </div>
+            <div class="git-info-content-headings">
+              <h2>Email:</h2>
+              <p>infomailrealar@gmail.com</p>
+              <p>supportmail01@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="copyright flex flex-wrap justify-between">
-        <p>Copyright © 2024 Realar, All rights reserved.</p>
-        <div class="footer-policy-links flex flex-wrap">
-          <a href="#">Terms of Use</a>
-          <a href="#">Privacy Policy</a>
+      <div class="get_in_touch_map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1739433498393!5m2!1sen!2sin"
+          width="100%" height="700" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content-container justify-around flex flex-wrap">
+      <div class="footer-content-1 fc footer-content">
+        <div class="footer-logo"><img src="/images/LogoBrown.png" alt="Footer_Logo_Pincode"></div>
+        <p>
+          Whether you’re seeking a personal sanctuary, an investment anchored in faith, or a peaceful setting to spend
+          your golden years, our plotted housing project offers an opportunity to be part of Ayodhya’s evolving
+          tapestry.
+        </p>
+        <div class="footer-social-links flex">
+          <div class="footer-social">
+            <img src="/images/facebook-app-symbol.png" alt="facebook-icon" />
+          </div>
+          <div class="footer-social">
+            <img src="/images/twitter.png" alt="twitter-icon" />
+          </div>
+          <div class="footer-social">
+            <img src="/images/youtube.png" alt="youtube-icon" />
+          </div>
+          <div class="footer-social">
+            <img src="/images/instagram.png" alt="instagram-icon" />
+          </div>
         </div>
       </div>
-    </footer>
+      <div class="footer-content-2 fc footer-content">
+        <h2>Get In Touch</h2>
+        <div class="footer-git flex items-center">
+          <div class="footer-git-icon">
+            <img src="/images/pin.png" alt="footer-location-icon" />
+          </div>
+          <div class="footer-git-para">
+            <p>PINCODE Real Estate, <br> Ayodhya, Uttar Pradesh</p>
+          </div>
+        </div>
+        <div class="footer-git flex items-center">
+          <div class="footer-git-icon">
+            <img src="/images/conversation.png" alt="footer-location-icon" />
+          </div>
+          <div class="footer-git-para">
+            <p>+91 xxxxxxxx</p>
+          </div>
+        </div>
+        <div class="footer-git flex items-center">
+          <div class="footer-git-icon">
+            <img src="/images/mail.png" alt="footer-location-icon" />
+          </div>
+          <div class="footer-git-para">
+            <p>info@pincodeayodhya.in</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content-3 fc footer-content">
+        <h2>Useful Link</h2>
+        <div class="footer-useful-link flex flex-col">
+          <a href="#">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/amenities.html">Amenities</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright flex flex-wrap justify-between">
+      <p>Copyright © 2024 Realar, All rights reserved.</p>
+      <div class="footer-policy-links flex flex-wrap">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="/scripts/script.js"></script>
-    <script src="/scripts/swiper.js"></script>
-    
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/swiper.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/scripts/gsap.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/scripts/properties-popup.js"></script>
+  <script src="/scripts/gsap.js"></script>
+</body>
+
 </html>

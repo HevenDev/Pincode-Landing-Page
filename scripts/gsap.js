@@ -148,7 +148,7 @@ gsap.from(".fc", {
   stagger: 0.3,
   scrollTrigger: {
     trigger: ".fc",
-    start: "top center",
+    start: "top top",
     end: "bottom bottom",
   }
 })
