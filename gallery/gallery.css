@@ -4,7 +4,7 @@ body {
   background-color: #f5f5f5;
 }
 
-.contact-heading {
+/* .contact-heading {
   margin-top: 70px;
   min-height: 250px;
   width: 100vw;
@@ -49,7 +49,7 @@ body {
   list-style-type: none;
   font-size: larger;
   color: rgb(44, 44, 81);
-}
+} */
 
 .gallery {
   column-count: 4; /* Creates masonry effect */

@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-.contact-heading {
-  min-height: 250px;
-  width: 100vw;
-  margin-top: 65px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#ae9898));
-  align-content: center;
-  padding: 0 10%;
-}
 
 .contact-head-content1 {
   display: flex;

@@ -1,0 +1,39 @@
+.navLinks li {
+    position: relative;
+    list-style: none;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.navLinks li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navLinks li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* active underline on the respective page */
+
+.navLinks li a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

@@ -141,14 +141,14 @@ gsap.from(".get_in_touch_map", {
     end: "bottom bottom",
   }
 })
-gsap.from(".fc", {
-  y: "-100",
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
-  scrollTrigger: {
-    trigger: ".fc",
-    start: "top top",
-    end: "bottom bottom",
-  }
-})
+// gsap.from(".fc", {
+//   y: "-100",
+//   opacity: 0,
+//   duration: 1,
+//   stagger: 0.3,
+//   scrollTrigger: {
+//     trigger: ".fc",
+//     start: "top center",
+//     end: "bottom bottom",
+//   }
+// })
