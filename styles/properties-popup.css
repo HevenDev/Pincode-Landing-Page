@@ -92,6 +92,19 @@
     transition: transform 0.5s ease-in-out;
 }
 
+/* .popup button {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: #654545;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #fff;
+    margin-top: 16px;
+    width: 100%;
+    cursor: pointer;
+} */
+
 .popup button {
     padding: 14px;
     border-radius: 8px;
@@ -103,7 +116,19 @@
     margin-top: 16px;
     width: 100%;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.popup button:hover {
+    background-color: #7a5b5b; /* Slightly lighter shade */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.popup button:active {
+    transform: scale(0.95); /* Press-down effect */
+}
+
 
 .close-btn {
     cursor: pointer;

@@ -181,7 +181,7 @@
   .moreAbout-link {
     text-align: center;
     display: block;
-    transform: translateX(0);
+    /* transform: translateX(0); */
     width: 275px;
     margin: auto;
   }

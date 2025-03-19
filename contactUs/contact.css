@@ -138,7 +138,7 @@
   border-radius: 8px;
 }
 
-.contact-form button {
+/* .contact-form button {
   padding: 14px;
   border-radius: 8px;
   background-color: #301a1a;
@@ -147,7 +147,32 @@
   font-weight: 400;
   border: none;
   margin-top: 16px;
+} */
+
+.contact-form button {
+  padding: 14px;
+  border-radius: 8px;
+  background-color: #654545;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.contact-form button:hover {
+  background-color: #7a5b5b; /* Slightly lighter shade */
+  transform: scale(1.05); /* Slight zoom effect */
+  /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);  */
+
+}
+
+.contact-form button:active {
+  transform: scale(0.5); /* Slight press effect */
+}
+
 
 .contact iframe {
   width: 100vw;

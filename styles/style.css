@@ -80,13 +80,85 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 1rem 2rem;
   white-space: nowrap;
 }
-.moreAbout-link {
+
+.get_in_touch_link a{
   transform: translateX(1.5rem) translateY(2rem);
   display: inline-block;
   background-color: #301a1a;
-  width: 275px;
+  width: 280px;
   border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  color: var(--white-color);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
 }
+
+.get_in_touch_link a:hover {
+  background-color: #4a2a2a; /* Lighter shade on hover */
+  transform: translateX(1.5rem) translateY(2rem) scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.get_in_touch_link a:active {
+  transform: translateX(1.5rem) translateY(2rem) scale(0.95);
+}
+/* .moreAbout-link {
+  transform: translateX(1.5rem) translateY(2rem);
+  display: inline-block;
+  background-color: #301a1a;
+  width: 280px;
+  border-radius: 25px;
+} */
+
+.moreAbout-link a{
+  transform: translateX(1.5rem) translateY(2rem);
+  display: inline-block;
+  background-color: #301a1a;
+  width: 308px;
+  border-radius: 25px;
+  color: var(--white-color);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+}
+
+.moreAbout-link a:hover {
+  background-color: #4a2a2a; /* Lighter shade on hover */
+  transform: translateX(1rem) translateY(2rem) scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.moreAbout-link a:active {
+  transform: translateX(1.5rem) translateY(2rem) scale(0.95);
+}
+
+.browse-project-link a{
+  transform: translateX(1.5rem) translateY(2rem);
+  display: inline-block;
+  background-color: #301a1a;
+  width: 280px;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  width: 308px;
+  color: var(--white-color);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+}
+
+.browse-project-link a:hover{
+  background-color: #4a2a2a; /* Lighter shade on hover */
+  transform: translateX(1.5rem) translateY(2rem) scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+
+
+.browse-project-link a:active{
+  transform: translateX(1.5rem) translateY(2rem) scale(0.95);
+}
+
 .servicesPageSection,
 .projectsPageSection, .teamPageSection, .testimonialsPageSection, .contactPageSection, .news_articlePageSection {
   padding: 2rem;
@@ -168,12 +240,32 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400;
   font-size: 20px;
 }
-.rq-visit a {
+/* .rq-visit a {
   background-color: #301a1a;
   color: var(--white-color);
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
+} */
+
+.rq-visit a {
+  background-color: #301a1a;
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.rq-visit a:hover {
+  background-color: #4a2a2a; /* Slightly lighter shade */
+  transform: scale(1.05); /* Slight zoom effect */
+  /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
+}
+
+.rq-visit a:active {
+  transform: scale(0.95); /* Press-down effect */
+}
+
 
 /* ===Home number CSS === */
 
@@ -650,6 +742,26 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: transparent;
   color: #fff;
 }
+
+
+.form_submit{
+  /* transform: translateX(1rem) translateY(2rem); */
+  background-color: #301a1a;
+  color: var(--white-color);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_submit:hover{
+  background-color: #4a2a2a; /* Lighter shade on hover */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.form_submit:active{
+  transform: translateX(1.5rem) translateY(2rem) scale(0.95);
+}
+
+
 
 /* === Get in touch Page CSS === */
 .get_in_touch_content{
