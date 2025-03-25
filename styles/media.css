@@ -32,7 +32,7 @@
   .home-swipers{
     transform: translateY(7rem);
   }
-  .menu-bar{
+  /* .menu-bar{
     display: flex;
   }
   .navbar{
@@ -60,7 +60,7 @@
  
   .logo {
     font-size: 44px;
-  }
+  } */
   .home-swiper-container{
     height: 500px;
     width: 90%;

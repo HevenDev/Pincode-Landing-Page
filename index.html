@@ -11,9 +11,221 @@
   <link rel="stylesheet" href="/styles/swiper.css" />
   <link rel="stylesheet" href="/styles/properties-popup.css">
   <link rel="stylesheet" href="/styles/animation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <title>Pincode - Home</title>
+  <style>
+    .home-mains {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .home-side-icons {
+      width: 70px;
+      height: 100vh;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .icon {
+      margin-top: 20px;
+      font-size: 24px;
+      padding: 0 1rem;
+    }
+
+    .first-page {
+      display: flex;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Video with Direct Overlay */
+    .video-overlay {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: brightness(50%);
+      /* Darkens video directly */
+    }
+
+    /* Centered Content */
+    .video-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+
+    .video-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .video-content p{
+      font-size: 1.5rem;
+    }
+
+    /* Button Styling */
+    .explore-btn {
+      margin-top: 15px;
+      background: white;
+      color: black;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #301A1A;
+      ;
+      color: white;
+    }
+
+   /* Blinking Scale Animation */
+@keyframes blink-scale {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Apply Animation to Hero Image */
+.hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    animation: blink-scale 5s infinite alternate ease-in-out;
+}
+
+
+    .hero {
+      position: relative;
+      height: 60vh;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Features Section */
+    .features {
+
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .features h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-grid {
+      /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-card {
+      background: white;
+      width: 370px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .homePageSection .form_submit{
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -36,8 +248,8 @@
 
   <section class="homePageSection">
     <header class="header">
-      <nav class="navbar flex items-center">
-        <div class="logo"><img src="/images/LogoWhite.png" alt="Logo_Pincode"></div>
+      <nav style="background-color: #eeeeee;" class="navbar flex items-center">
+        <div class="logo"><img src="/images/LogoBrown.png" alt="Logo_Pincode"></div>
         <ul class="navLinks flex justify-around">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="/about.html">About Us</a></li>
@@ -46,72 +258,42 @@
           <li><a href="/gallery.html">Gallery</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
         </ul>
-        <div class="menu-bar">
+        <div class="menu-bar" style="background-color: #301A1A;">
           <div class="bars bar-1"></div>
           <div class="bars bar-2"></div>
           <div class="bars bar-3"></div>
         </div>
-        <div class="rq-visit" >
+        <!-- <div class="rq-visit">
           <h2>
             <a href="#" id="openPopup">Request A Visit
               <img class="arrow-img" src="/images/thin-arrow.png" alt="right-arrow" /></a>
           </h2>
-        </div>
+        </div> -->
       </nav>
     </header>
-    <main class="home-main">
-      <div class="home-swipers flex">
-        <div class="home-left-swiper">
-          <img id="activeImage" src="" alt="home-left-slide" />
-        </div>
-        <div class="home-swiper-container">
-          <div class="home-swiper-content">
-            <h2 class="home-head"></h2>
-            <p class="home-para"></p>
-          </div>
-          <div class="home-below-swiper">
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper home-swiper-wraper">
-                <!-- Slides -->
-                <div class="swiper-slide home-slide">
-                  <img id="content1"
-                    src="https://plus.unsplash.com/premium_photo-1688120026544-bf41a74f05df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="home-slide-img" />
-                </div>
-                <div class="swiper-slide home-slide">
-                  <img id="content2"
-                    src="https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXVyb3BlfGVufDB8fDB8fHww"
-                    alt="home-slide-img-2" />
-                </div>
-                <div class="swiper-slide home-slide">
-                  <img id="content3"
-                    src="https://images.unsplash.com/photo-1473951574080-01fe45ec8643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="home-slide-img" />
-                </div>
-                <div class="swiper-slide home-slide">
-                  <img id="content4"
-                    src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="home-slide-img" />
-                </div>
-                <div class="swiper-slide home-slide">
-                  <img id="content5"
-                    src="https://images.unsplash.com/photo-1542379950-b3fc716c16f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="home-slide-img" />
-                </div>
-                <div class="swiper-slide home-slide">
-                  <img id="content6"
-                    src="https://images.unsplash.com/photo-1501952476817-d7ae22e8ee4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="home-slide-img" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+    <div class="first-page">
+      <div class="home-side-icons">
+        <ul class="icons flex justify-around">
+          <li class="icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li class="icon"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li class="icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="icon"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
       </div>
-    </main>
+      <main class="home-mains">
+        <div class="video-container">
+          <video class="video-overlay" loop autoplay muted playsinline>
+            <source src="/images/demo-pincode-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-content">
+            <h1>Discover the Future</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, consequuntur.</p>
+            <button class="explore-btn">Explore</button>
+          </div>
+        </div>
+      </main>
+    </div>
   </section>
   <section class="aboutPageSection">
     <div class="aboutUsContainer flex items-center flex-wrap justify-center">
@@ -206,138 +388,72 @@
     </div>
   </section>
   <section class="projectsPageSection">
-    <div class="project-content project-gsap-top flex items-center">
-      <div class="project-headings">
-        <h1>Browse Our Latest Projects</h1>
-        <p>
-          We are a real estate firm with over 20 years of expertise, and our
-          main goal is to provide amazing locations to our partners and
-          clients.
-        </p>
+    <section class="hero">
+      <img class="hero-img" src="/about/src/contact-bg-img.avif" alt="">
+      <div class="hero-content">
+        <h1>Features & Amenities</h1>
+        <p>Experience a premium lifestyle with top-tier amenities designed for comfort, security, and luxury.</p>
       </div>
-      <div class="browse-projects project-gsap-top">
-        <h3 class="browse-project-link">
-          <a href="">Browse All Products
-            <img class="arrow-img" src="/images/thin-arrow.png" alt="right-arrow" /></a>
-        </h3>
-      </div>
-    </div>
-    <div class="projectSwiper">
-      <div class="swiper project-swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper project-swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1739323006029-2d8452a47df6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
-                alt="project-slide-1" />
-            </div>
-            <h2>Villa Amsterdam</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="project-slide-2" />
-            </div>
-            <h2>Villa Interlaken</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1738779001459-3c2efd2f6e88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NHx8fGVufDB8fHx8fA%3D%3D"
-                alt="project-slide-3" />
-            </div>
-            <h2>Villa Veince</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXVyb3BlfGVufDB8fDB8fHww"
-                alt="project-slide-4" />
-            </div>
-            <h2>Villa France</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1690372791935-3efc879e4ca3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXVyb3BlfGVufDB8fDB8fHww"
-                alt="project-slide-5" />
-            </div>
-            <h2>Villa London</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXVyb3BlfGVufDB8fDB8fHww"
-                alt="project-slide-6" />
-            </div>
-            <h2>Villa Zurich</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="project-slide-7" />
-            </div>
-            <h2>Villa Berlin</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-          <div class="swiper-slide project-slide">
-            <div class="project-slide-img">
-              <img
-                src="https://images.unsplash.com/photo-1507840771025-26e8ececa04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGV1cm9wZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="project-slide-8" />
-            </div>
-            <h2>Villa Moscow</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Libero, blanditiis? Consequatur a sit voluptatum unde, saepe
-              cupiditate assumenda, odit
-            </p>
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+    </section>
 
-        <!-- If we need navigation buttons -->
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Our Premium Amenities</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3076/3076936.png" alt="Security">
+          <h3>24/7 Security</h3>
+          <p>Ensuring safety with gated access and surveillance.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2624/2624423.png" alt="Waste Management">
+          <h3>Waste Management</h3>
+          <p>Eco-friendly waste disposal and recycling system.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3198/3198789.png" alt="Street Lighting">
+          <h3>Street Lighting</h3>
+          <p>Well-lit roads enhance security and visibility at night.</p>
+        </div>
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Parking">
+          <h3>Dedicated Parking</h3>
+          <p>Ample space for residents and guests.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Clubhouse">
+          <h3>Community Clubhouse</h3>
+          <p>Perfect for gatherings, events, and activities.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/858/858872.png" alt="Jogging">
+          <h3>Jogging & Cycling Tracks</h3>
+          <p>Stay active with well-maintained tracks.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2648/2648708.png" alt="Garden">
+          <h3>Landscaped Gardens</h3>
+          <p>Green spaces for relaxation and nature walks.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046730.png" alt="Yoga">
+          <h3>Yoga & Meditation Zone</h3>
+          <p>Find peace with dedicated wellness areas.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3183/3183931.png" alt="Internet">
+          <h3>High-Speed Internet</h3>
+          <p>Stay connected with fast and reliable connectivity.</p>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
   <section class="getQuotePageSection">
     <div class="getQuote_container flex flex-col justify-center items-center">
@@ -365,10 +481,7 @@
   </section>
   <section class="contactPageSection">
     <div class="contact_form_container flex-wrap flex justify-around items-center">
-      <div class="contact_form_img">
-        <img src="https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/booking_1_1.png"
-          alt="contact-form-img" />
-      </div>
+     
       <form action="" class="contact_form flex flex-col">
         <h1>Book Business Solutions</h1>
         <div class="flex flex-wrap name-num-form justify-between">

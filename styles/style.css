@@ -159,9 +159,13 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: translateX(1.5rem) translateY(2rem) scale(0.95);
 }
 
+/* .projectsPageSection{
+  align-items: center;
+} */
+
 .servicesPageSection,
 .projectsPageSection, .teamPageSection, .testimonialsPageSection, .contactPageSection, .news_articlePageSection {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .arrow-img {
@@ -222,8 +226,41 @@ input[type="number"]::-webkit-inner-spin-button {
   background: #fff;
   transition: all 0.4s ease-in-out;
 }
-.navbar {
+
+.menu-bar{
+  display: flex;
+}
+.navbar{
+  justify-content: space-between !important;
+  padding: 0.5rem 2rem;
+}
+
+.navLinks {
   padding: 0.5rem 0;
+  justify-content: space-around;
+  background-color: #5d4d4d;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  top: -100vh;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  z-index: 999;
+  transition: top 0.5s ease-in-out;
+}
+.navLinks li a{
+  color: #000;
+}
+.navLinks.show{
+  top: 0;
+}
+
+.logo {
+  font-size: 44px;
+}
+
+.navbar {
   justify-content: space-around;
   background-color: #301a1a;
 }
@@ -236,10 +273,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .navLinks li a{
   color: #fff;
 }
-.rq-visit h2 {
+/* .rq-visit h2 {
   font-weight: 400;
   font-size: 20px;
-}
+} */
 /* .rq-visit a {
   background-color: #301a1a;
   color: var(--white-color);
@@ -247,7 +284,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 30px;
 } */
 
-.rq-visit a {
+/* .rq-visit a {
   background-color: #301a1a;
   color: var(--white-color);
   padding: 0.75rem 1.5rem;
@@ -257,14 +294,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .rq-visit a:hover {
-  background-color: #4a2a2a; /* Slightly lighter shade */
-  transform: scale(1.05); /* Slight zoom effect */
-  /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
+  background-color: #4a2a2a;
+  transform: scale(1.05);
 }
 
 .rq-visit a:active {
-  transform: scale(0.95); /* Press-down effect */
-}
+  transform: scale(0.95);
+} */
 
 
 /* ===Home number CSS === */
@@ -378,7 +414,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* === About us page CSS === */
 .aboutPageSection {
-  padding: 12rem 2rem 4rem;
+  padding: 4rem 2rem 4rem;
 }
 .aboutUsContent {
   width: 50%;
@@ -524,6 +560,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 0;
   left: 0;
   width: 120px;
+  display: none;
   height: 188px;
   background: transparent;
   border-top-left-radius: 100px;
@@ -536,6 +573,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 0;
   right: 0;
   width: 120px;
+  display: none;
   height: 188px;
   background: transparent;
   border-top-right-radius: 100px;
@@ -675,7 +713,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #301a1a;
 }
 .contact_form_container{
-  padding-top: 6rem;
+  padding: 4rem 0;
 }
 .contact_form_img{
   width: 45%;
@@ -695,6 +733,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .contact_form h1{
   color: var(--white-color);
   padding: 0 0 1rem;
+  text-align: center;
 }
 
 .contact_form img{
@@ -731,7 +770,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 5%;
 }
 .form_submit{
-  width: 40%;
+  width: 100%;
   cursor: pointer;
   font-size: 18px;
   gap: 15px;
